@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="POST">
+        <div class="cont">
+            <h1>{{nameState}}</h1>
+            
+            <div class="names">
+                <div class="bboy-name" name="bboyRed"><span>{{bboyRed}}</span></div>
+                <input type="text" hidden name="bboyRed" value="{{bboyRed}}" >
+                <div class="bboy-name"  name="bboyBlue"><span>{{bboyBlue}}</span></div>
+                <input type="text" hidden name="bboyBlue" value="{{bboyBlue}}" >
+            </div>
+            <div class="pag-field">
+                <ul class="pagination pagination-lg pag">
+                    <li class="page-item ">
+                        <a class="page-link el-a a1 " id="wrong" href="#" onclick="takeA('a1')" >⬅️</a>
+                        <input class='va1 va' type="text" hidden name="a1" value="false" >
+                    </li>
+                    <li class="page-item">
+                    <a class="page-link el-a a2 " href="#" onclick="takeA('a2')">⬅️</a>
+                    <input class='va2 va' type="text" hidden name="a2" value="false" >
+                    </li>
+                    <li class="page-item">
+                    <a class="page-link el-a a3 " href="#" onclick="takeA('a3')">⬅️</a>
+                    <input class='va3 va' type="text" hidden name="a3" value="false" >
+                </ul>
+
+                <ul class="pagination pagination-lg pag">
+                    <li class="page-item ">
+                    <a class="page-link el-b b1 " id="wrong" href="#" onclick="takeB('b1')">➡️</a>
+                    <input class='vb1 vb' type="text" hidden name="b1" value="false" >
+                    </li>
+                    <li class="page-item">
+                    <a class="page-link el-b b2 " href="#" onclick="takeB('b2')">➡️</a>
+                    <input class='vb2 vb' type="text" hidden name="b2" value="false" >
+                    </li>
+                    <li class="page-item">
+                    <input class='vb3 vb' type="text" hidden name="b3" value="false" >    
+                    <a class="page-link el-b b3 " href="#" onclick="takeB('b3')">➡️</a>
+                </ul>
+            </div>
+            <div class="tie-field">
+                <button type="button" class="btn btn-info tie" onclick="fullTie()">Full Tie</button>
+            </div>
+            <div class="next-field">
+                <button type="button" class="btn btn-warning last-btn" onclick="resetField()">Reset</button>
+                <button type="submit" class="btn btn-success last-btn">Next</button>
+            </div>
+            
+        </div>
+
+        </form>
+        <script src="main.js"></script>
+</body>
+</html>
